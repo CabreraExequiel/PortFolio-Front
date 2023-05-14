@@ -14,12 +14,7 @@ export class ProyectosComponent implements OnInit {
  proyecto: any;
   ngOnInit(): void {
 
-    const loggedIn = localStorage.getItem('loggedIn');
-  if (loggedIn === 'true') {
-    this.loggedIn = true;
-  } else {
-    this.loggedIn = false;
-  }
+   
   
    this.datosPortafolio.getProyecto().subscribe(data => {
   this.proyecto = data;

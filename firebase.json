@@ -1,0 +1,10 @@
+{
+  "hosting": {
+    "public": "dist/prot-folio-front",
+    "ignore": [
+      "firebase.json",
+      "**/.*",
+      "**/node_modules/**"
+    ]
+  }
+}

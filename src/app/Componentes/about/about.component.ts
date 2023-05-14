@@ -1,7 +1,6 @@
-import { HttpClient } from '@angular/common/http';
 import { Component, OnInit, ViewChild } from '@angular/core';
-import axios from 'axios';
 import { PortafolioService } from 'src/app/servicios/portafolio.service';
+import { HttpClient } from '@angular/common/http';
 
 @Component({
   selector: 'app-about',
@@ -9,13 +8,14 @@ import { PortafolioService } from 'src/app/servicios/portafolio.service';
   styleUrls: ['./about.component.css']
 })
 export class AboutComponent implements OnInit {
- @ViewChild('descripcion') descripcion: any;
 
+  @ViewChild('descripcion') descripcion: any;
   usuario: any;
   descripcionUsuario: any;
 
   constructor(private datosPortafolio: PortafolioService, private httpClient: HttpClient) { }
-  loggedIn = false; 
+  loggedIn = false;
+
   ngOnInit(): void {
     this.datosPortafolio.getPerfil().subscribe(data =>{
       this.usuario = data;
@@ -26,9 +26,7 @@ export class AboutComponent implements OnInit {
     } else {
       this.loggedIn = false;
     }
-    
   }
-  
 
   onClickEditar() {
     const nuevoTexto = prompt('Ingrese el nuevo texto:');
@@ -38,11 +36,9 @@ export class AboutComponent implements OnInit {
         id: this.usuario[0].id,
         descripcion: nuevoTexto
       };
-    
-     
-     
+      this.datosPortafolio.actualizarDescripcion(usuarioActualizado).subscribe(data => {
+        console.log('Descripción actualizada');
+      });
     }
   }
-  
-  
 }
