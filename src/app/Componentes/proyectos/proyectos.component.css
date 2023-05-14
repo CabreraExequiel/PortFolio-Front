@@ -1,0 +1,15 @@
+.titulo{
+    border-radius: 35px;
+    border: solid;
+  }
+  h2{
+    font-family: anton;
+  }
+  .divBtn{
+    border-radius: 35px;
+    border: solid;
+  }
+  .container-fluid{
+    background-color:  rgb(218, 216, 214);
+  }
+  

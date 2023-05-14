@@ -12,6 +12,7 @@ import { AboutComponent } from './Componentes/about/about.component';
 import { EducacionComponent } from './Componentes/educacion/educacion.component';
 import { EmpleoComponent } from './Componentes/empleo/empleo.component';
 import { InicioComponent } from './Componentes/inicio/inicio.component';
+import { ProyectosComponent } from './Componentes/proyectos/proyectos.component';
 
 
 
@@ -25,7 +26,8 @@ import { InicioComponent } from './Componentes/inicio/inicio.component';
     AboutComponent,
     EducacionComponent,
     EmpleoComponent,
-    InicioComponent
+    InicioComponent,
+    ProyectosComponent
     
   
     
