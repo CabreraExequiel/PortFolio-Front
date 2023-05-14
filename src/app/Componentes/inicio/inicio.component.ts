@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-//import { PortafolioService } from 'src/app/servicios/portafolio.service';
+import { PortafolioService } from 'src/app/servicios/portafolio.service';
 
 
 @Component({
@@ -8,11 +8,9 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./inicio.component.css']
 })
 export class InicioComponent implements OnInit {
-    ngOnInit(): void {
-        throw new Error('Method not implemented.');
-    }
+    
 
-  /*constructor(private datosPortafolio:PortafolioService) { }
+  constructor(private datosPortafolio:PortafolioService) { }
 usuario: any
 
   ngOnInit(): void {
@@ -22,6 +20,6 @@ usuario: any
   
    
     
-  }*/
+  }
 
 }

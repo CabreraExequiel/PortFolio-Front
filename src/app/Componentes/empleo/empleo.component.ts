@@ -1,6 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import axios from 'axios';
-//import { PortafolioService } from 'src/app/servicios/portafolio.service';
+import { PortafolioService } from 'src/app/servicios/portafolio.service';
 
 @Component({
   selector: 'app-empleo',
@@ -8,11 +8,7 @@ import axios from 'axios';
   styleUrls: ['./empleo.component.css']
 })
 export class EmpleoComponent implements OnInit {
-    ngOnInit(): void {
-        throw new Error('Method not implemented.');
-    }
-
-    /*
+    
 empleo: any
 loggedIn = false; 
   constructor(private datosPortafolio: PortafolioService) { }
@@ -61,6 +57,6 @@ onClickEditar() {
     });
   }
 }
-*/
+
 
 }

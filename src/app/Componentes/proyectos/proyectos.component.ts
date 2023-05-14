@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-//import { PortafolioService } from 'src/app/servicios/portafolio.service';
+import { PortafolioService } from 'src/app/servicios/portafolio.service';
 
 @Component({
   selector: 'app-proyectos',
@@ -8,10 +8,7 @@ import { Component, OnInit } from '@angular/core';
 })
 
 export class ProyectosComponent implements OnInit {
-    ngOnInit(): void {
-        throw new Error('Method not implemented.');
-    }
-  /*loggedIn = false;
+    loggedIn = false;
 
   constructor(private datosPortafolio:PortafolioService) { }
  proyecto: any;
@@ -28,5 +25,5 @@ export class ProyectosComponent implements OnInit {
   this.proyecto = data;
 });
   
-}*/
+}
 }

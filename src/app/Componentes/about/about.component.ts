@@ -1,7 +1,7 @@
 import { HttpClient } from '@angular/common/http';
 import { Component, OnInit, ViewChild } from '@angular/core';
 import axios from 'axios';
-//import { PortafolioService } from 'src/app/servicios/portafolio.service';
+import { PortafolioService } from 'src/app/servicios/portafolio.service';
 
 @Component({
   selector: 'app-about',
@@ -9,10 +9,7 @@ import axios from 'axios';
   styleUrls: ['./about.component.css']
 })
 export class AboutComponent implements OnInit {
-    ngOnInit(): void {
-        throw new Error('Method not implemented.');
-    }
- /* @ViewChild('descripcion') descripcion: any;
+ @ViewChild('descripcion') descripcion: any;
 
   usuario: any;
   descripcionUsuario: any;
@@ -46,6 +43,6 @@ export class AboutComponent implements OnInit {
      
     }
   }
-  */
+  
   
 }
