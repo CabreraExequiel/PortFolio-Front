@@ -1,0 +1,27 @@
+
+.titulo{
+    border-radius: 35px;
+    border: solid;
+    border-color: white;
+  }
+  h2{
+    font-family: anton;
+  }
+  @media (max-width: 768px) {
+    .empleo {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+    }
+    img{
+      max-width: 250px;
+    }
+  }
+  .divBtn{
+    border: solid white;
+    border-radius: 35px;
+    text-align: center;
+  }
+  img{
+    width: 500px;
+  }

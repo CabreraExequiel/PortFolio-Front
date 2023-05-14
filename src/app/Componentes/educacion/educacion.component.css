@@ -1,0 +1,63 @@
+h2{
+    font-family: anton;
+    text-align: center;
+    margin-top: 10px;
+}
+.titulo{
+    border-radius: 35px;
+    border: solid;
+}
+.educacion{
+    
+    background-color: rgb(218, 216, 214);
+    
+}
+section{
+    margin-left: 15px;
+    margin-right: 15px;
+}
+.divEducacion{
+   border: solid;
+   background-color: beige;
+   align-items: center;
+   text-align: center;
+   display: flex;
+   justify-content: space-between;
+   width: 80%;
+   margin: auto;
+   margin-top: 20px;
+}
+img{
+    width: 150px;
+    height: 100px;
+    
+}
+.imgArgPro{
+    width: 200px;
+    height: 70px;
+    margin: auto;
+}
+.imgAlkemy{
+    width: 150px;
+    height: 100px;
+    margin-left: 10px;
+}
+.imgFinnegans{
+    margin-left: 10px;
+}
+.btn{
+    margin-right: 10px;
+}
+.divBtn{
+    border: solid black;
+    border-radius: 35px;
+    text-align: center;
+    margin-top: 10px;
+}
+@media (max-width: 768px) {
+    .divEducacion {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+    }
+  }
