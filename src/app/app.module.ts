@@ -6,7 +6,7 @@ import { AppComponent } from './app.component';
 import { SkillsComponent } from './Componentes/skills/skills.component';
 import { NavBarComponent } from './ComponentesReutilizables/nav-bar/nav-bar.component';
 import { FormComponent } from './ComponentesReutilizables/formulario/form/form.component';
-import { FormsModule } from '@angular/forms';
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { HttpClientModule } from '@angular/common/http';
 import { AboutComponent } from './Componentes/about/about.component';
 import { EducacionComponent } from './Componentes/educacion/educacion.component';
@@ -37,7 +37,9 @@ import { ProyectosComponent } from './Componentes/proyectos/proyectos.component'
     BrowserModule,
     AppRoutingModule,
     FormsModule,
-    HttpClientModule
+    HttpClientModule,
+    ReactiveFormsModule
+    
   ],
   exports:[
    NavBarComponent
