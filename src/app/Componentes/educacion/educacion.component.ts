@@ -18,12 +18,10 @@ export class EducacionComponent implements OnInit {
   
 
   ngOnInit(): void {
-    const loggedIn = localStorage.getItem('loggedIn');
-    if (loggedIn === 'true') {
-      this.loggedIn = true;
-    } else {
-      this.loggedIn = false;
-    }
+    const token = localStorage.getItem('token');
+  if (token) {
+    this.loggedIn = true;
+  }
 
     this.datosPortafolio.getEducacion().subscribe(data => {
       this.educacion = data;
@@ -36,30 +34,7 @@ export class EducacionComponent implements OnInit {
   
 }
 onClickEditar() {
-  const nuevaDescripcion = prompt('Ingrese la nueva descripción:');
-  const nuevoNombreCurso = prompt('Ingrese el nuevo nombre del curso:');
-  const nuevoTitulo = prompt('Ingrese el nuevo título:');
-  const nuevaUrlImg = prompt('Ingrese la nueva URL de la imagen:');
-  if (nuevaDescripcion && nuevoNombreCurso && nuevoTitulo && nuevaUrlImg) {
-    axios.post('/actualizar/educacion', {
-      id: this.educacion[0].id,
-      descripcion: nuevaDescripcion,
-      nombre_curso: nuevoNombreCurso,
-      titulo: nuevoTitulo,
-      url_img: nuevaUrlImg
-    })
-    .then(response => {
-      console.log(response.data);
-      // Actualizar los campos en la variable del componente
-      this.educacion[0].descripcion = nuevaDescripcion;
-      this.educacion[0].nombre_curso = nuevoNombreCurso;
-      this.educacion[0].titulo = nuevoTitulo;
-      this.educacion[0].url_img = nuevaUrlImg;
-    })
-    .catch(error => {
-      console.log(error);
-    });
-  }
+ 
 }
 
 }

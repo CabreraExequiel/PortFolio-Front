@@ -12,21 +12,25 @@ export class AboutComponent implements OnInit {
   @ViewChild('descripcion') descripcion: any;
   usuario: any;
   descripcionUsuario: any;
+  imagenUsuario: any;
 
   constructor(private datosPortafolio: PortafolioService, private httpClient: HttpClient) { }
   loggedIn = false;
 
-  ngOnInit(): void {
-    this.datosPortafolio.getPerfil().subscribe(data =>{
-      this.usuario = data;
-    })
-    const loggedIn = localStorage.getItem('loggedIn');
-    if (loggedIn === 'true') {
-      this.loggedIn = true;
-    } else {
-      this.loggedIn = false;
-    }
+  
+
+ngOnInit(): void {
+  this.datosPortafolio.getPerfil().subscribe(data =>{
+    this.usuario = data;
+  })
+  const token = localStorage.getItem('token');
+  if (token) {
+    this.loggedIn = true;
   }
+}
+onClickEditarImagen(){
+  
+}
 
   onClickEditar() {
     const nuevoTexto = prompt('Ingrese el nuevo texto:');

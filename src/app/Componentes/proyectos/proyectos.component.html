@@ -69,9 +69,8 @@
           </div>
     </div>
     <div  class="col-12 divBtn text-center ">
-        <button class="btn m-2" type="button" [disabled]="!loggedIn" ><i class="fa-solid fa-trash"></i></button>
-        <button class="btn" type="button" [disabled]="!loggedIn"><i class="fa-solid fa-plus"></i></button>
-        <button class="btn m-2" type="button" [disabled]="!loggedIn"><i class="fa-solid fa-pen"></i></button>
+        <button class="btn m-2" type="button" *ngIf="loggedIn" ><i class="fa-solid fa-trash"></i></button>
+        <button class="btn" type="button" *ngIf="loggedIn"><i class="fa-solid fa-plus"></i></button>
     </div>
 
 </div>

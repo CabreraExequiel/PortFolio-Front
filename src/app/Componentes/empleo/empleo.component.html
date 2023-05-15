@@ -16,12 +16,11 @@
             <h3 class="text-light">Contacto: {{empleo[0].contacto}}</h3>
         </div>
         <div>
-            <button class="btn btn-link" type="button" [disabled]="!loggedIn" (click)="onClickEditar()"><i class="fas fa-edit"></i></button>
         </div>
     </div>
     <div class="col-12 mt-auto divBtn fixed-bottom">
-        <button class="btn text-light m-2" type="button"  [disabled]="!loggedIn"><i class="fa-solid fa-trash"></i></button>
-        <button class="btn text-light " type="button"  [disabled]="!loggedIn"><i class="fa-solid fa-plus"></i></button>
+        <button class="btn text-light m-2" type="button"  *ngIf="loggedIn"><i class="fa-solid fa-trash"></i></button>
+        <button class="btn text-light " type="button"  *ngIf="loggedIn"><i class="fa-solid fa-plus"></i></button>
     </div>
     
 </div>

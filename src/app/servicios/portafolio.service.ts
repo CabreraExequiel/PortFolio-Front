@@ -13,6 +13,9 @@ import { Usuario } from 'src/interfaces/Usuario'
 
 
 export class PortafolioService {
+  getUsuario() {
+    throw new Error('Method not implemented.');
+  }
   
   private apiURL = environment.apiURL;
 
@@ -49,8 +52,10 @@ export class PortafolioService {
     return this.http.post(url, usuario);
   }
   
-  
-  
+  login(credentials: { email: string, password: string }): Observable<any> {
+    const url = `${this.apiURL}/login`;
+    return this.http.post(url, credentials);
+  }
   
   
 

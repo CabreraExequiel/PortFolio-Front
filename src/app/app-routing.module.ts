@@ -15,10 +15,10 @@ const routes: Routes = [
   { path: 'skill', component: SkillsComponent},
   { path: 'educacion', component: EducacionComponent},
   { path: 'proyectos', component: ProyectosComponent},
-  { path: 'empleos', component: EmpleoComponent}
- 
-  
+  { path: 'empleos', component: EmpleoComponent},
+  { path: '**', redirectTo: 'inicio', pathMatch: 'full' }
 ];
+
 
 @NgModule({
   imports: [RouterModule.forRoot(routes)],

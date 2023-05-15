@@ -16,7 +16,10 @@ loggedIn = false;
 
   ngOnInit(): void {
     
-   
+    const token = localStorage.getItem('token');
+    if (token) {
+      this.loggedIn = true;
+    }
 
     this.datosPortafolio.getEmpleo().subscribe(data => {
       this.empleo = data;
