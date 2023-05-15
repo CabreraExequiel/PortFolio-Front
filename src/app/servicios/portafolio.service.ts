@@ -13,9 +13,7 @@ import { Usuario } from 'src/interfaces/Usuario'
 
 
 export class PortafolioService {
-  getUsuario() {
-    throw new Error('Method not implemented.');
-  }
+ 
   
   private apiURL = environment.apiURL;
 
@@ -48,15 +46,17 @@ export class PortafolioService {
   }
 
   actualizarDescripcion(usuario: Usuario): Observable<any> {
-    const url = `${this.apiURL}/nueva/descripcion`;
-    return this.http.post(url, usuario);
+    const url6 = `${this.apiURL}/nueva/descripcion`;
+    return this.http.post(url6, usuario);
   }
   
   login(credentials: { email: string, password: string }): Observable<any> {
-    const url = `${this.apiURL}/login`;
-    return this.http.post(url, credentials);
+    const url7 = `${this.apiURL}/login`;
+    return this.http.post(url7, credentials);
   }
-  
+  getUsuario() {
+    
+  }
   
 
 
