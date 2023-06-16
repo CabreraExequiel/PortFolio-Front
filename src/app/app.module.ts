@@ -13,6 +13,7 @@ import { EducacionComponent } from './Componentes/educacion/educacion.component'
 import { EmpleoComponent } from './Componentes/empleo/empleo.component';
 import { InicioComponent } from './Componentes/inicio/inicio.component';
 import { ProyectosComponent } from './Componentes/proyectos/proyectos.component';
+import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
 
 
 
@@ -38,7 +39,8 @@ import { ProyectosComponent } from './Componentes/proyectos/proyectos.component'
     AppRoutingModule,
     FormsModule,
     HttpClientModule,
-    ReactiveFormsModule
+    ReactiveFormsModule,
+    NgbModule
     
   ],
   exports:[

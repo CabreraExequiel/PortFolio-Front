@@ -42,7 +42,7 @@ onClickEditarImagen(){
         descripcion: nuevoTexto
       };
       this.datosPortafolio.actualizarDescripcion(usuarioActualizado).subscribe(data => {
-        console.log('Descripción actualizada');
+       
       });
     }
   }
